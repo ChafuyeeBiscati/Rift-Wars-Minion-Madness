@@ -16,7 +16,7 @@ namespace Rift_Wars
         public Champion()
         {
             x = 380;
-            y = 480;
+            y = 440;
             width = 55;
             height = 90;
             champion = Properties.Resources.Veigar_Champion;
@@ -29,6 +29,10 @@ namespace Rift_Wars
             g.DrawImage(champion, champRec);
         }
 
+        public void moveChampion(int mouseX)
+        {
+            champRec.X = mouseX - (champRec.Width / 2);
+        }
 
     }
 }
